@@ -36,23 +36,30 @@ class _LoginPageState extends State<LoginPage> {
                     padding: EdgeInsets.only(
                         left: 50, right: 50, bottom: 20, top: 10),
                     child: TextField(
-                        controller: nameController,
-                        decoration: InputDecoration(
+                      controller: nameController,
+                      decoration: InputDecoration(
                           labelText: 'Email Id',
                           border: OutlineInputBorder(),
-                        )),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.blue)),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green))),
+                    ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(
-                        left: 50, right: 50, bottom: 20, top: 10),
-                    child: TextField(
+                      padding: EdgeInsets.only(
+                          left: 50, right: 50, bottom: 20, top: 10),
+                      child: TextField(
                         obscureText: true,
                         controller: passwordController,
                         decoration: InputDecoration(
-                          labelText: 'Password',
-                          border: OutlineInputBorder(),
-                        )),
-                  ),
+                            labelText: 'Password',
+                            border: OutlineInputBorder(),
+                            enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.blue)),
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.green))),
+                      )),
                   ElevatedButton(
                       onPressed: () async {
                         // Navigator.pushNamed(context, '/home');
@@ -71,6 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                             print('Wrong password provided.');
                           }
                         }
+                        Navigator.pushNamed(context, '/home');
                       },
                       style: ElevatedButton.styleFrom(
                           elevation: 10,
@@ -78,6 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30))),
                       child: Text("Login!")),
+
                   SizedBox(
                     height: 200,
                   ),

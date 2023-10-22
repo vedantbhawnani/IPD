@@ -2,9 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'package:login_page/HomePage.dart';
-import 'package:login_page/LoginPage.dart';
-import 'package:login_page/SignUp.dart';
+import 'Navigator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,18 +11,25 @@ void main() async {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // theme: ThemeData(
+      //     brightness: Brightness.light,
+      //     primaryColor: Colors.red,
+      //     primarySwatch: Colors.green),
+      // darkTheme: ThemeData(brightness: Brightness.dark),
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
-      routes: {
-        '/login': (context) => LoginPage(),
-        '/signup': (context) => SignUp(),
-        '/home': (context) => HomePage(),
-      },
+      home: HomePage(),
+      // routes: {
+      //   '/login': (context) => LoginPage(),
+      //   '/signup': (context) => SignUp(),
+      // '/home': (context) => MyMapApp(),
+      // '/favorites': (context) => Favorites(),
+      // '/settings': (settings) => Settings(),
+      // },
     );
   }
 }
