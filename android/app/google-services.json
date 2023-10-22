@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221213718624",
+    "project_id": "terrain-login",
+    "storage_bucket": "terrain-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221213718624:android:e2a97ebcc699b40185ab05",
+        "android_client_info": {
+          "package_name": "com.example.login_page"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHoorisy1zU8bGatF7eoYybakiflH_g1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
