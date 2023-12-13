@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 
 const LatLng currentLoc = LatLng(19.416218, 72.979394);
 
-class MyMapApp extends StatefulWidget {
-  const MyMapApp({super.key});
+class MapsPage extends StatefulWidget {
+  const MapsPage({super.key});
 
   @override
-  _MyMapAppState createState() => _MyMapAppState();
+  _MapsPageState createState() => _MapsPageState();
 }
 
-class _MyMapAppState extends State<MyMapApp> {
+class _MapsPageState extends State<MapsPage> {
   GoogleMapController? mapController;
   // int _currentIndex = 0;
 
@@ -22,16 +22,6 @@ class _MyMapAppState extends State<MyMapApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print("hi");
-          },
-          child: Icon(Icons.add),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-        appBar: AppBar(
-          title: const Text('IPD'),
-        ),
         body: GoogleMap(
           mapType: MapType.terrain,
           onMapCreated: (controller) {
@@ -51,5 +41,5 @@ class _MyMapAppState extends State<MyMapApp> {
 }
 
 void main() {
-  runApp(MyMapApp());
+  runApp(MapsPage());
 }
