@@ -91,7 +91,7 @@ class _SettingsPageState extends State<Settings> {
               backgroundColor: Colors.redAccent,
             ),
           ),
-          // About Section
+          // About
           ExpansionTile(
             title: Text('About'),
             children: [
