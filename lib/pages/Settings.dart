@@ -34,9 +34,8 @@ class _SettingsPageState extends State<Settings> {
   }
 
   void _clearData() async {
-    // Implement data clearing logic for search history or saved locations
-    // Show confirmation dialog and handle potential errors
-    // ...
+    // Implement delete logic for search history or saved locations
+    // Show confirmation dialog
   }
 
   @override
@@ -62,7 +61,6 @@ class _SettingsPageState extends State<Settings> {
             items: const [
               DropdownMenuItem(value: 1, child: Text('Standard')),
               DropdownMenuItem(value: 2, child: Text('Satellite')),
-              // ... other options
             ],
             onChanged: (value) => setState(() => _mapType = value as int),
             decoration: InputDecoration(
@@ -74,7 +72,6 @@ class _SettingsPageState extends State<Settings> {
             items: const [
               DropdownMenuItem(value: 'Female', child: Text('Female Voice')),
               DropdownMenuItem(value: 'Male', child: Text('Male Voice')),
-              // ... other options
             ],
             onChanged: (value) =>
                 setState(() => _navigationVoice = value as String),
@@ -82,15 +79,6 @@ class _SettingsPageState extends State<Settings> {
               labelText: 'Navigation Voice',
             ),
           ),
-          // Map Theme Preview Pane
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text('Map Theme Preview'),
-            ),
-          ),
-          // Update this pane dynamically based on map type and theme color
-          // ...
           ElevatedButton(
             onPressed: _saveSettings,
             child: Text('Save Settings'),
@@ -108,8 +96,8 @@ class _SettingsPageState extends State<Settings> {
             title: Text('About'),
             children: [
               Text('App Version: 1.0.0'),
-              Text('Contact: support@yourapp.com'),
-              Text('Privacy Policy: https://yourapp.com/privacy'),
+              Text('Contact: tjv@ipd.com'),
+              Text('Made by: Jay Kansara, Tanmay Mistry, Vedant Bhawnanig'),
             ],
           ),
         ],
